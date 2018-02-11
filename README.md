@@ -4,15 +4,18 @@
 Go to:
 http://localhost:3000/graphiql
 
+
+### Fetch all reservations
 ```
-# Fetch all reservations
 query {
   allReservations {
     name
   }  
 }
+```
 
-# Fetch single Reservation
+### Fetch single Reservation
+```
 query {
   reservation(id: "5a78daf11b396b37744bbc9c") {
     _id
@@ -22,8 +25,10 @@ query {
     departureDate
   }
 }
+```
 
-# Fetch single reservation and get all reservations
+### Fetch single reservation and get all reservations
+```
 query {
   reservation(id: "5a78daf11b396b37744bbc9c") {
     _id
@@ -36,8 +41,10 @@ query {
     name
   }
 }
+```
 
-# Create new Reservation
+### Create new Reservation
+```
 mutation {
   createReservation(input: {
     name: "Amr Farouk Desouky",
